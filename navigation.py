@@ -10,25 +10,25 @@ def get_normal(x, y):
     return math.sqrt(x*x + y*y)
 
 
-class ship_status:
-    x = 1
-    y = 1
-    dx = -.52
-    dy = 2.954
+# class ship_status:
+#     x = 1
+#     y = 1
+#     dx = -.52
+#     dy = 2.954
 
 
 def navigate_to_point(x, y, ship_status):
     vector = angle_magnitude()
-    d_x = x-ship_status.x
-    d_y = y-ship_status.y
+    d_x = x-ship_status["x"]
+    d_y = y-ship_status["y"]
     d_magnitude = get_normal(d_x, d_y)
     d_x_n = d_x/d_magnitude
     d_y_n = d_y/d_magnitude
 
-    v_magnitude = get_normal(ship_status.dx, ship_status.dy)
+    v_magnitude = get_normal(ship_status["dx"], ship_status["dy"])
 
-    v_x_n = ship_status.dx/v_magnitude
-    v_y_n = ship_status.dy/v_magnitude
+    v_x_n = ship_status["dx"]/v_magnitude
+    v_y_n = ship_status["dy"]/v_magnitude
 
     a_x = d_x_n - v_x_n
     a_y = d_y_n - v_y_n
