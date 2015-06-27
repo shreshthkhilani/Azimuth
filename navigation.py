@@ -39,7 +39,7 @@ def navigate_to_point(x, y, ship_status):
     a_x = d_x_n - v_x_n
     a_y = d_y_n - v_y_n
     print("Moving ship " + str(a_x) + " " + str(a_y))
-    vector.angle = math.atan2(a_y, a_x) + math.pi
+    vector.angle = math.atan2(-a_y, a_x) + math.pi
     vector.magnitude = 1
     return vector
 
