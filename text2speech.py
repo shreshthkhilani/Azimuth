@@ -1,6 +1,6 @@
 import os
 import platform
-
+import sys
 
 def text_to_speech(tosay):
     if platform.system().lower() == "linux":
