@@ -1,0 +1,173 @@
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+    var data1 = {
+    labels: ["0s", "1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s"],
+    datasets: [
+        {
+            label: "data",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#2D22F3",
+            pointHighlightStroke: "#2D22F3",
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        }
+      ]
+  };
+
+    var data2 = {
+    labels: ["0s", "1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s"],
+    datasets: [
+        {
+            label: "data",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#2D22F3",
+            pointHighlightStroke: "#2D22F3",
+            data: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+        }
+      ]
+  };
+
+    var data3 = {
+    labels: ["0s", "1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s"],
+    datasets: [
+        {
+            label: "data",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#2D22F3",
+            pointHighlightStroke: "#2D22F3",
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+        }
+      ]
+  };
+
+    var data4 = {
+    labels: ["0s", "1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s"],
+    datasets: [
+        {
+            label: "data",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#2D22F3",
+            pointHighlightStroke: "#2D22F3",
+            data: [0, 2, 4, 4, 3, 2, 3, 2, 2, 2]
+        }
+      ]
+  };
+
+    var data5 = {
+    labels: ["0s", "1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s"],
+    datasets: [
+        {
+            label: "data",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#2D22F3",
+            pointHighlightStroke: "#2D22F3",
+            data: [0, 1, 1, 4, 4, 1, 2, 2, 3, 4]
+        }
+      ]
+  };
+
+  var options = {
+    bezierCurve: false,
+    legendTemplate : "<ul><li>0: No Owner</li><li>1: Pink Floyd</li><li>2: The Beatles</li><li>3: The Doors</li><li>4: Led Zeppelin</li></ul>"
+  };
+
+    $("#base1").click(function(){
+      $("#base1").addClass("activeRow");
+      $("#base2").removeClass("activeRow");
+      $("#base3").removeClass("activeRow");
+      $("#base4").removeClass("activeRow");
+      $("#base5").removeClass("activeRow");
+      selectBase(0);
+      drawChart(data1, options);
+    });
+    $("#base2").click(function(){
+      $("#base1").removeClass("activeRow");
+      $("#base2").addClass("activeRow");
+      $("#base3").removeClass("activeRow");
+      $("#base4").removeClass("activeRow");
+      $("#base5").removeClass("activeRow");
+      selectBase(1);
+      drawChart(data2, options);
+    });
+    $("#base3").click(function(){
+      $("#base1").removeClass("activeRow");
+      $("#base2").removeClass("activeRow");
+      $("#base3").addClass("activeRow");
+      $("#base4").removeClass("activeRow");
+      $("#base5").removeClass("activeRow");
+      selectBase(2);
+      drawChart(data3, options);
+    });
+    $("#base4").click(function(){
+      $("#base1").removeClass("activeRow");
+      $("#base2").removeClass("activeRow");
+      $("#base3").removeClass("activeRow");
+      $("#base4").addClass("activeRow");
+      $("#base5").removeClass("activeRow");
+      selectBase(3);
+      drawChart(data4, options);
+    });
+    $("#base5").click(function(){
+      $("#base1").removeClass("activeRow");
+      $("#base2").removeClass("activeRow");
+      $("#base3").removeClass("activeRow");
+      $("#base4").removeClass("activeRow");
+      $("#base5").addClass("activeRow");
+      selectBase(4);
+      drawChart(data5, options);
+    });
+  });
+
+</script>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Current Owner</th>
+      <th>Time Owned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="base1">
+      <td>1</td>
+      <td>-</td>
+      <td>0</td>
+    </tr>
+    <tr id="base2">
+      <td>2</td>
+      <td>Pink Floyd</td>
+      <td>1</td>
+    </tr>
+    <tr id="base3">
+      <td>3</td>
+      <td>The Beatles</td>
+      <td>2</td>
+    </tr>
+    <tr id="base4">
+      <td>4</td>
+      <td>The Beatles</td>
+      <td>1</td>
+    </tr>
+    <tr id="base5">
+      <td>5</td>
+      <td>Led Zeppelin</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>

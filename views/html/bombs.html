@@ -1,0 +1,27 @@
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+    $("#b1").click(function(){
+      $("#b1").addClass("activeRow");
+      selectBomb(0);
+    });
+  });
+
+</script>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Owner</th>
+      <th>Time since deployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="b1">
+      <td>1</td>
+      <td>The Doors</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>

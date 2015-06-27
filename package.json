@@ -1,0 +1,24 @@
+{
+  "name": "Azimuth",
+  "version": "0.1.0",
+  "description": "Azimuth",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "node.js"
+  ],
+  "private": true,
+  "dependencies": {
+    "async": "*",
+    "ejs": "*",
+    "ejs-locals": "*",
+    "express": "4.x",
+    "express-session": "*"
+  },
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}

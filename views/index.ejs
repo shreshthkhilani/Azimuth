@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>B3</title>
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="http://assets.bwbx.io/business/public/images/favicons/favicon-192x192.03482356.png">
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- include our script -->
+    <script type="text/javascript" src="canvas.js"></script>
+
+    <!-- Chart.JS -->
+    <script src="Chart.js"></script>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#navBots").addClass("active");
+        $("#tableHalf").load("bots.html");
+        $("#cash").text("1000");
+
+        // Handle changes to other tabs
+        $("#navBots").click(function() {
+          $("#navBots").addClass("active");
+          $("#navBases").removeClass("active");
+          $("#navBombs").removeClass("active");
+          $("#tableHalf").load("bots.html");
+          onBodyLoad();
+          clearChart();
+        });
+        $("#navBases").click(function() {
+          $("#navBots").removeClass("active");
+          $("#navBases").addClass("active");
+          $("#navBombs").removeClass("active");
+          $("#tableHalf").load("bases.html");
+          onBodyLoad();
+          clearChart();
+        });
+        $("#navBombs").click(function() {
+          $("#navBots").removeClass("active");
+          $("#navBases").removeClass("active");
+          $("#navBombs").addClass("active");
+          $("#tableHalf").load("bombs.html");
+          onBodyLoad();
+          clearChart();
+        });
+        $("#b3").hover(
+          function() {
+            $("#bloomberg").text("BotsBasesBombs");
+          },
+          function() {
+            $("#bloomberg").text("B");
+          });
+      });
+    </script>
+
+    <div class="myNav">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <a href="/" class="block" id="b3"><h2><span id="bloomberg">B</span>3</h2></a>
+          </div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8" align="right">
+            <ul>
+              <li><a href="#" id="navBots"><h3>Bots</h3></a></li>
+              <li><a href="#" id="navBases"><h3>Bases</h3></a></li>
+              <li><a href="#" id="navBombs"><h3>Bombs</h3></a></li>
+              <li><h2>$<span id="cash"></span></h2></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="myContent">
+      <div class="row">
+        <div class="col-lg-6 half">
+          <canvas id="game-field" > </canvas>
+          
+        </div>
+        <div class="col-lg-6 half" id="tableHalf">
+        </div>
+      </div>
+      <div class="container">
+        <canvas id="chart-field" > </canvas>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      onBodyLoad();
+    </script>
+
+  </body>
+</html>

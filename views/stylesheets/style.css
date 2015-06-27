@@ -1,0 +1,100 @@
+body, html {
+	min-height: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.myNav {
+	background-color: white !important;
+	border-bottom: 1px solid #ccc;
+	height: 54px;
+}
+
+.myNav h2 {
+	margin-top: 10px;
+	color: #2D22F3;
+}
+
+.myNav h3 {
+	margin-top: 12px;
+}
+
+.myNav ul {
+	list-style: none;
+
+}
+
+li {
+	float: left;
+	width: 25%;
+}
+
+li a {
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+li a:hover {
+	text-decoration: none;
+	color: #2D22F3;
+}
+
+a:active {
+	text-decoration: none !important;
+}
+
+a:visited {
+	text-decoration: none !important;
+}
+
+.active {
+	color: #2D22F3 !important;
+}
+
+#bloomberg {
+	color: black !important;
+}
+
+.block, .block:hover {
+	text-decoration: none;
+}
+
+.myContent {
+	position: absolute;
+	top: 54px;
+	bottom: 0;
+	width: 100%;
+}
+
+#game-field {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    display : inline;
+    margin: 16px 16px 4px 16px;
+    width: 100%;
+}
+
+#chart-field {
+    border-style: none;
+    border-width: 1px;
+    border-color: #ccc;
+    display : inline;
+    width: 100%;
+}
+
+.half {
+	min-height: 100%;
+}
+
+.activeRow {
+	background-color: #ccc !important;
+}
+
+#cash {
+	color: black;
+}
